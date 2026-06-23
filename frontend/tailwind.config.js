@@ -1,6 +1,13 @@
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: [
+    join(__dirname, "index.html"),
+    join(__dirname, "src/**/*.{js,jsx}"),
+  ],
   theme: {
     extend: {
       colors: {
